@@ -1,0 +1,27 @@
+/**
+ * unitless-line-height
+ *
+ * Allows precise line-height values to be used, while providing consistent line-height when
+ * font-size is increased or decreased via browser settings
+ *
+ * @param {number|string} $px-line-height - Desired line-height in pixels, ex. 68 or 68px (usually from design spec)
+ * @param {number|string} $px-font-size - Desired font-size in pixels, ex. 64 or 64px (usually from design spec)
+ * @return {number} unitless line-height number which will be multiplied by the element's font-size to determine line-height 
+ */
+ @function unitless-line-height($px-line-height, $px-font-size) {
+    @return $px-line-height / $px-font-size;
+  }
+  
+  /**
+   * px-to-rem
+   *
+   * Converts pixel value to REM value
+   *
+   * @param {string} $px-value - Pixel value to convert, ex. 20px
+   * @param {string} [$root=$base-px]- Optional param indicating HTML font size, ex. 16px
+   * @return {string} REM value
+   */
+  @function px-to-rem($px-value, $root: $base-px) {
+    @return ($px-value / $root) * 1rem;
+  }
+  

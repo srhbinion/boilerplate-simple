@@ -1,0 +1,43 @@
+/* /////////////////////// Skip Links
+
+skip links are an accessible pattern to help keyboard users skip over the top level navigation. https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-skip.html
+
+This should be the first link on every page and is visible only on focus. This link if selected, directs users to the main section on the page and if not selected users will continue to navigate though the top level navigation.
+
+  functional css pattern example:
+  <div class="skiplink">
+    <a href="#main-kin" class="skiplink--link">Skip to Main Content</a>
+  </div>
+*/ ///////////////////////
+
+.skiplink {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    &--link {
+      position: absolute;
+      top: -200px;
+      left: 10rem;
+      min-width: 200px;
+      font-family: $font-sans;
+      color: $white;
+      font-weight: bold;
+      font-size: 1rem;
+      text-decoration: none;
+      padding: 0.5rem;
+      text-align: center;
+      background-color: $black;
+      opacity: 0;
+      -webkit-transition: top 1s ease-out;
+      transition: top 0.3s ease-in-out, opacity 0.4s ease-in;
+      &:focus {
+        position: absolute;
+        opacity: 1;
+        top: 1.5rem;
+        outline-color: $gray;
+        outline-width: thick;
+        outline-offset: -3px;
+      }
+    }
+  }

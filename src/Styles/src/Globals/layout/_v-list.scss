@@ -1,0 +1,30 @@
+/* /////////////////////// Vertical List
+
+vertical list: apply to a list of item that display vertically.
+
+  functional css pattern example:
+  <ul class="v-list v-list__center"
+    ...
+  </ul>
+
+*/ ///////////////////////
+
+.v-list {
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+}
+
+.v-list__center {
+  align-items: center;
+}
+
+.v-list__right {
+  align-items: flex-end;
+}
+
+@for $i from 1 through 10 {
+  .v-list__#{$i}x > * {
+    margin-bottom: #{$i}rem;
+  }
+}

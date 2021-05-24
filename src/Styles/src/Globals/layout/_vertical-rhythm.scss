@@ -1,0 +1,30 @@
+/* /////////////////////// Vertical Rhythm
+
+vertical space: apply to container elements to adjust page spacing. .vr is based on the base font space of 16px.
+
+  functional css pattern example:
+  <div class="vr"
+    ...
+  </div>
+
+  <div class="vr__2hf"
+    ...
+  </div>
+
+*/ ///////////////////////
+
+.vr {
+  margin-bottom: 1rem;
+  &__qrt {
+    margin-bottom: 0.25rem;
+  }
+  &__hf {
+    margin-bottom: 0.5rem;
+  }
+}
+
+@for $i from 0 through 10 {
+  .vr__#{$i}x {
+    margin-bottom: #{$i}rem;
+  }
+}

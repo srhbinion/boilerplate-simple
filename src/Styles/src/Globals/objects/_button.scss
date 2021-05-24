@@ -1,0 +1,28 @@
+/* /////////////////////// Button
+button styles: apply to <button> elements frequently used patterns can be broken out into a css component otherwise use a functional css pattern. Do not apply buttons styles to div or span for they do not have click behaviors on them. Also outline styles on :focus states help key board navigation devices for a11y reasons. They can be styled differently but never removed per WCAG rules.
+
+primary example:
+  <button class="btn btn__primary">Continue</button>
+
+disabled btn:
+<button class="btn btn__primary btn__disabled">Continue</button>
+
+
+*/ ///////////////////////
+
+.btn {
+  @include button();
+  &__primary {
+    background-color: $secondary;
+    border: 1px solid transparent;
+    color: $white;
+    outline: 1px solid transparent;
+    &:hover {
+      background-color: $secondary-shade;
+    }
+    &:focus,
+    &:active {
+      box-shadow: 0 0 0 6px $primary-tone;
+    }
+  }
+}

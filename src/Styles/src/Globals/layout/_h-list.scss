@@ -1,0 +1,43 @@
+/* /////////////////////// Horizontal List
+
+horizontal list: apply to a list of item that display horizontal.
+
+  functional css pattern example:
+  <ul class="h-list h-list__center"
+    ...
+  </ul>
+
+*/ ///////////////////////
+
+.h-list {
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.h-list__center {
+  align-items: center;
+}
+
+.h-list__right {
+  justify-content: flex-end;
+}
+
+.h-list__nowrap {
+  flex-wrap: nowrap;
+}
+
+.h-list__top {
+  align-items: flex-start;
+}
+
+.h-list__bottom {
+  align-items: flex-end;
+}
+
+@for $i from 2 through 10 {
+  .h-list__x#{$i} > * {
+    margin-right: #{$i}rem;
+  }
+}

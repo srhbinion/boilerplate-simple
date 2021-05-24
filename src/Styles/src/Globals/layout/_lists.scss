@@ -1,0 +1,28 @@
+/* /////////////////////// Pipe List
+
+Pipe List: list of items with a decorative
+
+  functional css pattern example:
+  <ul class="pipe-list-v ">
+    <li class="pipe-list-v--item">
+      ...
+    </li>
+  </ul>
+
+*/ ///////////////////////
+
+@mixin pipe-list($line-c, $line-style, $line-vpad, $line-hpad) {
+  width: 100%;
+  &--item {
+    border-top: 1px $line-style $line-c;
+    width: 100%;
+    padding: ($base * $line-vpad) rem ($base * $line-hpad) rem;
+  }
+  &--item:last-child {
+    border-bottom: 1px $line-style $line-c;
+  }
+}
+
+.pipe-list__green {
+  @include pipe-list($secondary, dashed, 8, 0);
+}

@@ -1,0 +1,23 @@
+﻿/* ///////////////////////
+Fonts
+*/ ///////////////////////
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+// Font Family ----------
+$font-sans: 'Open Sans', sans-serif;
+$font-sans-bold: 'Open Sans', sans-serif;
+$font-sans-medium: 'Open Sans', sans-serif;
+$font-sans-light: 'Open Sans', sans-serif;
+$font-monospace: 'Courier New', Courier, monospace;
+
+body {
+  position: relative;
+  min-height: 100vh;
+  color: $black;
+  -webkit-font-smoothing: antialiased;
+  font-family: $font-sans;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.3;
+}

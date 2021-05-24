@@ -1,0 +1,84 @@
+/* /////////////////////// Text
+
+text styles: apply to <p> elements frequently used patterns can be broken out into a css component otherwise use a functional css pattern. Most copy on Kin app is 14px/0.75rem and $font-sans.
+
+// Translated .text units
+// 21px = 1.3125rem = lg
+// 18px = 1.125rem = (base text size)
+// 16px = 1rem = md
+// 14px = .875rem = caption sm
+// 12px = .75rem = x-sm
+
+  functional css pattern example for body text:
+  <p class="text text__left">Hello world!</p>
+
+  functional css pattern example for body text links:
+  <a class="text text__link" href="#">Click Here</a>
+
+  functional css pattern example for article text:
+  <p class="text-article text-article__medium">Hello world!</p>
+
+*/ ///////////////////////
+
+
+
+.text {
+  @include text();
+  &__center {
+    text-align: center;
+  }
+  &__left {
+    text-align: left;
+  }
+  &__right {
+    text-align: right;
+  }
+  &__gray {
+    color: $brand-gray;
+  }
+  &__medium {
+    font-family: $font-sans-medium;
+    font-weight: 500;
+  }
+  &__large {
+    font-size: px-to-rem(20px);
+    line-height: unitless-line-height(25px, 22px);
+    font-weight: 500;
+    @media #{$md} {
+      font-size: px-to-rem(22px);
+    }
+  }
+  &__bold {
+    font-family: $font-sans-bold;
+  }
+  &__light {
+    font-family: $font-sans-light;
+  }
+  &--caption {
+    font-size: px-to-rem(14px);
+    line-height: unitless-line-height(20px, 14px);
+  }
+  &__link {
+    @include link();
+  }
+}
+
+.text-article {
+  @include article();
+  &__medium {
+    font-family: $font-sans-medium;
+  }
+  &__link {
+    @include link();
+  }
+}
+
+//a11y text for screen readers but will not display visually and take up whitespace in the layout
+.sr-only {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+}

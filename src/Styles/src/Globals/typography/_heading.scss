@@ -1,0 +1,90 @@
+/* /////////////////////// Heading & Subheading Styles
+
+Heading styles: html heading elements should go in page order h1-> h6 for semantic & a11y purposes. heading styles should match html element frequently used patterns can be broken out into a css component otherwise use a functional css pattern
+
+  functional css pattern example:
+  <h4 class="hdg hdg__4 hdg__secondary">Policy Documents</h4>
+
+*/ ///////////////////////
+
+.hdg {
+  @include heading();
+
+  &__lg-display {
+    @include headline();
+  }
+
+  &__1 {
+    @include heading-1();
+  }
+
+  &__2 {
+    @include heading-2();
+  }
+
+  &__3 {
+    @include heading-3();
+  }
+
+  &__4 {
+    @include heading-4();
+  }
+
+  &__5 {
+    @include heading-5();
+  }
+
+  &__6 {
+    @include heading-6();
+  }
+
+  &__center {
+    text-align: center;
+  }
+
+  &__left {
+    text-align: left;
+  }
+
+  &__right {
+    text-align: right;
+  }
+
+  &__gray {
+    color: $brand-gray;
+  }
+
+  &__secondary {
+    color: $secondary;
+  }
+
+  &__light {
+    font-family: $font-sans-light;
+  }
+
+  &__medium {
+    font-family: $font-sans-medium;
+  }
+}
+
+.text-subhead {
+  font-family: $font-sans;
+  font-size: px-to-rem(18px);
+  line-height: 1.4;
+  font-weight: 400;
+  &--1 {
+    font-size: px-to-rem(40px);
+    line-height: unitless-line-height(50px, 40px);
+  }
+  &--2 {
+    font-size: px-to-rem(28px);
+    line-height: unitless-line-height(36px, 28px);
+  }
+  &--3 {
+    font-size: px-to-rem(22px);
+    line-height: unitless-line-height(28px, 22px);
+  }
+  &__link {
+    @include heading-link();
+  }
+}

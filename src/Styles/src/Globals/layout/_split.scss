@@ -1,0 +1,55 @@
+/* /////////////////////// Split
+
+split: container to align two items.
+
+  functional css pattern example:
+  <div class="split">
+    <div class="split__left">
+      ...
+    </div>
+    <div class="split__right">
+      ...
+    </div>
+  </div>
+
+*/ ///////////////////////
+
+.split {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.split--top {
+  align-items: flex-start;
+}
+
+.split--between {
+  .split__left {
+    text-align: left;
+  }
+
+  .split__right {
+    text-align: right;
+  }
+}
+
+.split--with-middle {
+  .split__left,
+  .split__right {
+    width: calc(45% - 0.5em);
+  }
+
+  .split__or {
+    width: 10%;
+  }
+}
+
+.split__left,
+.split__right {
+  width: calc(50% - 0.5em);
+}
+
+.split__right {
+  margin-left: 1em;
+}

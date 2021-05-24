@@ -1,0 +1,19 @@
+/* /////////////////////// Sizes
+*/ ///////////////////////
+
+$base: 1rem;
+$base-px: 16px;
+
+$x-small: 576px; // 36em Phone
+$small: 768px; // 48em Tablet
+$medium: 992px; // 62em
+$large: 1200px; // 75em Desktop
+$x-large: 1600px; // 100em Xl Desktop
+
+$page-width: 1060px;
+$xxs: 'only screen and (min-width: 0)';
+$xs: 'only screen and (min-width: ' + $x-small + ')';
+$sm: 'only screen and (min-width: ' + $small + ')';
+$md: 'only screen and (min-width: ' + $medium + ')';
+$lg: 'only screen and (min-width: ' + $large + ')';
+$xl: 'only screen and (min-width: ' + $x-large + ')';

@@ -1,0 +1,63 @@
+//@media #{$breakpoint} {
+//   property: value;
+// }
+
+@media #{$xs} {
+  .hide-sm,
+  .hide-md,
+  .hide-lg,
+  .hide-xl {
+    display: initial;
+  }
+  .hide-xs {
+    display: none;
+  }
+}
+
+@media #{$sm} {
+  .hide-xs,
+  .hide-md,
+  .hide-lg,
+  .hide-xl {
+    display: initial;
+  }
+  .hide-sm {
+    display: none;
+  }
+}
+
+@media #{$md} {
+  .hide-xs,
+  .hide-sm,
+  .hide-lg,
+  .hide-xl {
+    display: initial;
+  }
+  .hide-md {
+    display: none;
+  }
+}
+
+@media #{$lg} {
+  .hide-xs,
+  .hide-sm,
+  .hide-md,
+  .hide-xl {
+    display: initial;
+  }
+  .hide-lg {
+    display: none;
+  }
+}
+
+@media #{$xl} {
+  .hide-xs,
+  .hide-sm,
+  .hide-md,
+  .hide-lg {
+    display: initial;
+  }
+  .hide-xl {
+    display: none;
+  }
+}
